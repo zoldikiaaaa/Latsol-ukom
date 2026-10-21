@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UKOM BY ZOLDIK ♡</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="logo">🩺</div>
+
+            <div>
+                <h1>UKOM BY ZOLDIK </h1>
+                <p>Menuju ukom one shoot 2027!</p>
+            </div>
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div>
+                <small>A LITTLE PROGRESS EVERY DAY</small>
+
+                <h2>
+                    Halo, bby sayang!<br>
+                    Kamu pasti bisa ♡
+                </h2>
+
+                <p>
+                    For my beloved gf, semangat belajarnya sayangku,
+                    cintaku, cantikku, duniaku, alam semestaku, 
+                    bumiku, bulanku, planetku, alienku 😘
+                </p>
+
+                <button class="primary" id="startBtn">
+                    Mulai Latihan →
+                </button>
+            </div>
+
+            <div class="hero-icon">
+                🩺
+            </div>
+
+        </section>
+
+
+        <!-- STATISTIK -->
+        <section class="stats">
+
+            <div class="stat">
+                <span>Soal dijawab</span>
+                <strong id="answeredStat">0 / 10</strong>
+            </div>
+
+            <div class="stat">
+                <span>Jawaban benar</span>
+                <strong id="correctStat">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Akurasi</span>
+                <strong id="accuracyStat">0%</strong>
+            </div>
+
+        </section>
+
+
+        <!-- AREA UTAMA -->
+        <div class="main-layout">
+
+            <!-- QUIZ -->
+            <main class="quiz-card">
+
+                <div class="quiz-header">
+                    <div>
+                        <h3>Latihan Soal</h3>
+                        <p>Pilih jawaban terbaik yaa ♡</p>
+                    </div>
+
+                    <button class="reset" id="resetBtn">
+                        Ulangi
+                    </button>
+                </div>
+
+
+                <!-- NOMOR SOAL -->
+                <div class="question-top">
+
+                    <span id="questionCount">
+                        Soal 1 dari 10
+                    </span>
+
+                    <span class="category" id="categoryTag">
+                        Keperawatan
+                    </span>
+
+                </div>
+
+
+                <!-- PERTANYAAN -->
+                <h2 class="question" id="questionText">
+                    Pertanyaan akan muncul di sini
+                </h2>
+
+
+                <!-- PILIHAN -->
+                <div class="options" id="options"></div>
+
+
+                <!-- FEEDBACK -->
+                <div class="feedback hidden" id="feedback"></div>
+
+
+                <!-- NAVIGASI -->
+                <div class="actions">
+
+                    <button class="secondary" id="prevBtn">
+                        ← Sebelumnya
+                    </button>
+
+                    <button class="primary" id="nextBtn" disabled>
+                        Berikutnya →
+                    </button>
+
+                </div>
+
+            </main>
+
+
+            <!-- SIDEBAR -->
+            <aside>
+
+                <!-- PESAN -->
+                <div class="message">
+
+                    <div class="heart">💌</div>
+
+                    <h3>Little message from me, yor kekasih.
+                        Tolong dengerin yang aku bilang 😡
+                    </h3>
+
+                    <p>
+                        Bby sayang, jangan terlalu keras sama
+                        diri sendiri ya. Kamu ga harus langsung
+                        bisa semuanya.
+                    </p>
+
+                    <p>
+                        Yang penting kamu terus belajar dan
+                        terus berusaha. Aku percaya kamu bisa
+                        ayangg, langsung one shoot pastii, aamiin
+                    </p>
+
+                    <strong>
+                        — aku sayang bangeeeeet sama kamu, sayang banget, parahhhh.
+                        love u, mwaaa
+                    </strong>
+
+                </div>
+
+
+                <!-- PETA SOAL -->
+                <div class="map-card">
+
+                    <div class="map-title">
+                        <h3>Peta Soal</h3>
+                        <span id="mapCaption">0 selesai</span>
+                    </div>
+
+                    <div class="question-map" id="questionMap"></div>
+
+                    <p class="legend">
+                        Biru = aktif · Hijau = benar · Merah = salah
+                    </p>
+
+                </div>
+
+
+                <!-- TIPS -->
+                <div class="tip-card">
+
+                    <h3>Jangan lupa sayang!</h3>
+
+                    <p>
+                        Baca kasus dengan teliti dan jangan
+                        buru-buru memilih jawaban.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- HASIL -->
+        <section class="result hidden" id="resultView">
+
+            <div class="result-icon" id="resultEmoji">
+                🎉
+            </div>
+
+            <small>SESI SELESAI</small>
+
+            <h2>Kamu hebat, bby sayang!</h2>
+
+            <div class="score" id="finalScore">
+                0%
+            </div>
+
+            <p id="resultText"></p>
+
+            <p class="love-text">
+                Apa pun hasilnya, aku bangga kamu sudah berusaha ♡
+            </p>
+
+            <button class="primary" id="againBtn">
+                Latihan Lagi ↻
+            </button>
+
+        </section>
+
+
+        <footer>
+            UKOM BY ZOLDIK · 
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
